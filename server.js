@@ -11,7 +11,7 @@ app.use("/", require(path.join(__dirname, "routes", "home")));
 // app.get('/home', (req, res) => {
 //     res.sendFile(__dirname + "/views/home.html");
 // })
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static( "public"));
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`)
 });
