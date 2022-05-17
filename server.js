@@ -8,9 +8,8 @@ app.set('views', 'views')
 
 app.use(bodyParser.json())
 app.use("/", require(path.join(__dirname, "routes", "home")));
-// app.get('/home', (req, res) => {
-//     res.sendFile(__dirname + "/views/home.html");
-// })
+app.use("/menu", require(path.join(__dirname, "routes", "menu")));
+
 app.use(express.static( "public"));
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`)
