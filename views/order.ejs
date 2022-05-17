@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Meal For Your Ingredients</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel = "stylesheet" href = "css/order.css">
+</head>
+<body>
+
+<header>
+
+  <a href="#" class="logo">restoran</a>
+
+  <nav class="navbar">
+    <a class="active" href="home">home</a>
+    <a href="searchmeal">dishes</a>
+
+    <a href="menu">menu</a>
+    <a href="order">order</a>
+  </nav>
+
+</header>
+
+
+
+<section class="order" id="order">
+
+  <h1 class="heading"> Nur-Sultan Summer cafe </h1>
+
+  <div class="row">
+
+    <div class="image">
+      <img src="images/orderimg.jpg" alt="">
+    </div>
+
+    <div class="form" >
+      <h2> for comfort</h2>
+      <h1><img src="  <%= imageURL0 %>  ">  </h1>
+      <h1>Temp <%= temp0 %>  Celcius</h1>
+      <h1>Wind speed: <%= windSpeed0 %> m/s</h1>
+      <h1>The weather is <%= wDescription0 %></h1>
+
+    </div>
+    <div class="form" >
+      <h2>the most delicious dishes in the cafe</h2>
+      <h1><a href="<%=goat %>">Goat</a></h1>
+      <h1><a href="<%=vege %>">Vegetarian</a></h1>
+      <h1><a href="<%=pasta %>">Pasta</a></h1>
+      <h1><a href="<%=beef %>">Beef</a></h1>
+    </div>
+
+  </div>
+
+</section>
+<section class="order" id="order">
+
+  <h1 class="heading"> Almaty Summer cafe </h1>
+
+  <div class="row">
+
+    <div class="image">
+      <img src="images/almatysum.jpg" alt="">
+    </div>
+
+    <div class="form" >
+      <h2> for comfort</h2>
+      <h1><img src="  <%= QimageURL %>  ">  </h1>
+      <h1>Temp <%= Qtemp %>  Celcius</h1>
+      <h1>Wind speed: <%= QwindSpeed %> m/s</h1>
+      <h1>The weather is <%= QwDescription %></h1>
+
+    </div>
+    <div class="form" >
+      <h2>the most delicious dishes in the cafe</h2>
+      <h1><a href="<%=star %>">Starter</a></h1>
+      <h1><a href="<%=brek %>">Breakfast</a></h1>
+      <h1><a href="<%=dis %>">Dessert</a></h1>
+    </div>
+
+  </div>
+
+</section>
+
+
+</body>
+</html>
