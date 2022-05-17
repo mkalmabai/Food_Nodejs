@@ -1,12 +1,23 @@
 
 const express = require("express");
+const app = express();
 const path = require("path");
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser')
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+app.use(cookieParser());
+app.use(bodyParser.json())
 
-const app = express();
+app.set('views', path.join(__dirname,'views'));
+app.set("view engine", "ejs");
+
+
+
 const PORT = process.env.POST||3000
-const homeRouter = require('./routes/home')
+const homeRouter = require(path.join(__dirname, "routes", "home"))
 // const menuRouter = require('./routes/menu')
 // const searchmealRouter = require('./routes/searchmeal')
 // const orderRouter = require('./routes/order')
@@ -21,13 +32,6 @@ app.use('/home',homeRouter);
 
 
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({extended:false}));
-app.use(cookieParser());
-
-app.set('views', path.join(__dirname,'views'));
-app.set("view engine", "ejs");
 
 
 
