@@ -3,12 +3,12 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const logger = require('morgan');
-const cookieParser = require('cookie-parser');
+//git add .const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser')
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({extended:false}));
-app.use(cookieParser());
+//app.use(express.json());
+//app.use(express.urlencoded({extended:false}));
+//app.use(cookieParser());
 app.use(bodyParser.json())
 
 app.set('views', path.join(__dirname,'views'));
