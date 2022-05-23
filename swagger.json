@@ -21,9 +21,9 @@
   "consumes": ["application/json"],
   "produces": ["application/json"],
   "paths": {
-    "/user": {
+    "/": {
       "get": {
-        "tags": ["User"],
+        "tags": ["/"],
         "summary": "Get all users in system",
         "responses": {
           "200": {
