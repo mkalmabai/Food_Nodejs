@@ -25,7 +25,7 @@ router
         axios.all([reqone,reqtwo,reqthr])
             .then(
                 axios.spread((...responses) =>{
-                    if(responses[0].status === 200 && responses[1].status ===200){
+                    if(responses[0].status === 200 && responses[1].status ===200 && responses[2].status ===200){
                         console.warn(responses[0].data.sys.country);
                         console.log(response.statusCode);
                         const almatyData = responses[2];
